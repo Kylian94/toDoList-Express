@@ -3,6 +3,9 @@
 {% block body %}
 
 	<div class="container" id="taskList" style="height:80vh;">
+		<div class="d-flex justify-content-center pt-3">
+			<h1 class="text-white shadow-md">Task list</h1>
+		</div>
 		{% if (tasks) %}
 			<div class="d-flex flex-wrap align-items-start justify-content-start pt-3">
 				{% for task in tasks  %}
