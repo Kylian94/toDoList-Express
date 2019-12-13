@@ -1,0 +1,25 @@
+{% extends 'layout.twig' %}
+
+{% block body %}
+
+	<div class="container mt-3">
+		{% if (tasks) %}
+			<div class="d-flex flex-wrap align-items-center justify-content-start">
+				{% for task in tasks  %}
+					<div class="card mx-3 my-2 col-6 col-md-2" style="width: 18rem;">
+						<div class="card-body">
+							<h5 class="card-title">{{ task.title }}</h5>
+							<h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+							<p class="card-text">{{ task.description }}</p>
+							<a href="/tasks/edit/{{ task.id }}" class="card-link">Edit</a>
+							<a href="/tasks/delete/{{ task.id }}" class="card-link">Delete</a>
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		{% else %}
+			<p>There is no task yet</p>
+		{% endif %}
+	</div>
+
+{% endblock %}
