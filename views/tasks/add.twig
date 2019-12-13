@@ -1,14 +1,18 @@
 {% extends 'layout.twig' %}
 
 {% block body %}
-	<div class="container" id="home" style="height:80vh;">
+	<div class="container d-flex flex-column align-items-center justify-content-center" id="home" style="height:80vh;">
+
+		<a href="/tasks" class="btn btn-primary my-3">
+			Back</a>
+
 		<div class="d-flex justify-content-center pt-3">
 			<h1 class="text-white shadow-md">{{title}}</h1>
 		</div>
-		<a href="/tasks" class="btn btn-primary my-3">
-			Back</a>
+
+
 		<div class="d-flex justify-content-center">
-			<div class="col-4 d-flex flex-column p-3 bg-light">
+			<div class="d-flex flex-column p-3 bg-light rounded">
 				<form method="POST" action="">
 					<div class="form-group">
 						<label for="exampleInputEmail1">Title</label>
